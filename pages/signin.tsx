@@ -1,94 +1,73 @@
-import Image from "next/image";
+import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import type {ReactElement} from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Signin() {
   return (
-    <>
-      <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-md">
-          <Image className="mx-auto h-10 w-auto" width={128} height={128} src="/logo.png" alt="Logo"/>
-          <h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            وارد حساب خود شوید
-          </h2>
-        </div>
-
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
-          <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
-            <form className="space-y-6" action="#" method="POST">
+    <section dir='rtl' className="bg-gray-700 bg-opacity-60 bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/background.jpg')] bg-cover bg-center bg-no-repeat bg-blend-multiply">
+      <div className="pt:mt-0 mx-auto flex flex-col items-center justify-center px-6 py-8 md:h-screen">
+        <Link
+          href="/"
+          className="mb-6 flex items-center text-2xl font-semibold text-white"
+        >
+          <Image width={48} height={48} className='w-[64px] h-[64px]' src="/logo.png" alt="Logo"/>
+        </Link>
+        <div className="w-full rounded-lg bg-white shadow dark:bg-gray-800 sm:max-w-md md:mt-0 xl:p-0">
+          <div className="space-y-4 p-6 sm:p-8 md:space-y-6 lg:space-y-8">
+            <h1 className="text-center text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl">
+              وارد حساب کاربری خود شوید
+            </h1>
+            <form className="space-y-4 md:space-y-6" action="#">
               <div>
-                <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                  شماره موبایل یا ایمیل
-                </label>
-                <div className="mt-2">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
+                <Label htmlFor="email" className="mb-2 block dark:text-white">آدرس ایمیل یا شماره تلفن همراه</Label>
+                <TextInput
+                  id="email"
+                  placeholder="name@company.com یا 09125446806"
+                  required
+                  type="email"
+                />
               </div>
-
               <div>
-                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                  رمز عبور
-                </label>
-                <div className="mt-2">
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="current-password"
-                    required
-                    className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
+                <Label htmlFor="password" className="mb-2 block dark:text-white">گذرواژه</Label>
+                <TextInput
+                  id="password"
+                  placeholder="••••••••"
+                  required
+                  type="password"
+                />
               </div>
-
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1">
-                  <input
-                    id="remember-me"
-                    name="remember-me"
-                    type="checkbox"
-                    className="h-4 w-4 rounded border-gray-300 text-green-600 focus:ring-green-600"
-                  />
-                  <label htmlFor="remember-me" className="ml-3 block text-sm leading-6 text-gray-900">
-                    مرا به خاطر بسپار
-                  </label>
+                <div className="flex items-start">
+                  <div className="flex h-5 items-center">
+                    <Checkbox id="remember-background" required />
+                  </div>
+                  <div className="mr-3 text-sm">
+                    <Label htmlFor="remember-background" className="text-gray-500 dark:text-gray-300">مرا به خاطر بسپار</Label>
+                  </div>
                 </div>
-
-                <div className="text-sm leading-6">
-                  <a href="#" className="font-semibold text-green-600 hover:text-green-500">
-                    رمز عبور را فراموش کرده اید ؟
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <button
-                  type="submit"
-                  className="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                <Link
+                  href="/password_reset"
+                  className="text-sm hover:text-green-500 font-medium text-primary-600 hover:underline dark:text-primary-500"
                 >
-                  ورود
-                </button>
+                  گذرواژه را فراموش کردی ؟
+                </Link>
               </div>
+              <Button type="submit" className="w-full bg-green-600 hover:!bg-green-500 hover:text-black">
+                ورود
+              </Button>
+              <p className="text-center text-sm text-gray-500 dark:text-gray-300">
+                <Link color="none" href="/signup" className="w-full hover:text-green-500 font-medium text-primary-600 dark:text-primary-500 p-0 [&>span]:p-0 hover:underline">
+                   حساب کاربری نداری ؟
+                </Link>
+              </p>
             </form>
           </div>
-
-          <p className="mt-10 text-center text-sm text-gray-500">
-            حساب کاربری نداری ؟{' '}
-            <a href="#" className="font-semibold leading-6 text-green-600 hover:text-green-500">
-              حساب کاربری بساز
-            </a>
-          </p>
         </div>
       </div>
-    </>
-  )
-}
+    </section>
+  );
+};
 
 Signin.getLayout = function getLayout(page: ReactElement) {
   return (

@@ -24,12 +24,14 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
 
     if (Component.getLayout) {
         return Component.getLayout(
-              <Component {...pageProps} />
+                     <Component {...pageProps} />
             )
         }
-        return       <ConfigProvider  locale={fa_IR} direction="rtl" theme={theme}>
+        return (
+            <ConfigProvider  locale={fa_IR} direction="rtl" theme={theme}>
                <Main>
                      <Component {...pageProps} />
                </Main>
-        </ConfigProvider>
+            </ConfigProvider>
+        )
     }

@@ -1,17 +1,18 @@
 import type {ReactElement} from "react";
 import { Button, Checkbox, Label, Select, TextInput } from "flowbite-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Signup() {
   return (
-    <section className="bg-gray-700 bg-opacity-60 bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/background.jpg')] bg-cover bg-center bg-no-repeat bg-blend-multiply">
+    <section dir='rtl' className="bg-gray-700 bg-opacity-60 bg-[url('https://flowbite.s3.amazonaws.com/blocks/marketing-ui/authentication/background.jpg')] bg-cover bg-center bg-no-repeat bg-blend-multiply">
       <div className="pt:mt-0 mx-auto flex flex-col items-center justify-center px-6 py-8 md:h-screen">
-        <a
-          href="#"
+        <Link
+          href="/"
           className="mb-6 flex items-center text-2xl font-semibold text-white"
         >
-          <Image className="" width={48} height={48} src="/logo.png" alt="Logo"/>
-        </a>
+          <Image width={48} height={48} className='w-[64px] h-[64px]' src="/logo.png" alt="Logo"/>
+        </Link>
         <div className="w-full rounded-lg bg-white shadow dark:bg-gray-800 sm:max-w-md md:mt-0 xl:p-0">
           <div className="space-y-4 p-6 sm:p-8 md:space-y-6 lg:space-y-8">
             <h2 className="text-center text-xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white md:text-2xl">
@@ -29,10 +30,10 @@ export default function Signup() {
                 />
               </div>
               <div className="grid grid-cols-1 gap-2">
-                <Label htmlFor="email" className="dark:text-white">شماره همراه</Label>
+                <Label htmlFor="number" className="dark:text-white">شماره همراه</Label>
                 <TextInput
-                    id="email"
-                    name="email"
+                    id="number"
+                    name="number"
                     placeholder="09125446806"
                     required
                     type="number"
@@ -64,10 +65,10 @@ export default function Signup() {
                 <div className="flex items-center gap-1">
                   <div className="ml-4 w-full">
                     <Label htmlFor="day" className="sr-only dark:text-white">
-                      Day
+                      روز
                     </Label>
-                    <Select id="day">
-                      <option selected>Day</option>
+                    <Select id="day" defaultValue='روز'>
+                      <option>روز</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -80,10 +81,10 @@ export default function Signup() {
                   </div>
                   <div className="ml-4 w-full">
                     <Label htmlFor="month" className="sr-only">
-                      Month
+                      ماه
                     </Label>
-                    <Select id="month">
-                      <option selected>Month</option>
+                    <Select id="month" defaultValue='ماه'>
+                      <option>ماه</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
@@ -96,10 +97,10 @@ export default function Signup() {
                   </div>
                   <div className="w-full">
                     <Label htmlFor="year" className="sr-only">
-                      Year
+                      سال
                     </Label>
-                    <Select id="year">
-                      <option selected>Year</option>
+                    <Select id="year" defaultValue='سال'>
+                      <option>سال</option>
                       <option value="1990">1990</option>
                       <option value="1991">1991</option>
                       <option value="1992">1992</option>
@@ -126,12 +127,12 @@ export default function Signup() {
                       className="text-gray-500 dark:text-gray-300"
                   >
                     من&nbsp;
-                    <a
+                    <Link
                         className="font-medium text-primary-600 hover:underline hover:text-green-500 dark:text-primary-500"
-                        href="#"
+                        href="/terms"
                     >
                       قوانین و مقررات&nbsp;
-                    </a>
+                    </Link>
                     را تایید میکنم
                   </Label>
                 </div>
@@ -140,12 +141,12 @@ export default function Signup() {
                 ساخت حساب کاربری
               </Button>
               <p className="text-center text-sm text-gray-900 dark:text-white font-medium">
-                <a
-                    href="#"
+                <Link
+                    href="/signin"
                     className="font-medium text-primary-600 hover:text-green-500 hover:underline dark:text-primary-500"
                 >
                   حساب کاربری دارید ؟
-                </a>
+                </Link>
               </p>
             </form>
           </div>

@@ -7,7 +7,6 @@ import Footer from "@/components/layout/footer";
 
 
 export default function Main({ children }: any) {
-
   return (
     <Layout>
       <Header/>
