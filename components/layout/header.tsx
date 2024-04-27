@@ -205,17 +205,19 @@ export default function Header() {
 
                   <Link
                       href="/"
+                      onClick={() => setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     خانه
                   </Link>
                   <Link
-                      href="#"
+                      href="/blog"
+                      onClick={() => setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     وبلاگ
                   </Link>
-                  <Disclosure as="div" className="-mx-3">
+                  <Disclosure  as="div" className="-mx-3">
                     {({open}) => (
                         <>
                           <Disclosure.Button
@@ -229,6 +231,7 @@ export default function Header() {
                           <Disclosure.Panel className="mt-2 space-y-2">
                             {[...products, ...callsToAction].map((item) => (
                                 <Disclosure.Button
+                                    onClick={() => setMobileMenuOpen(false)}
                                     key={item.name}
                                     as="a"
                                     href={item.href}
@@ -243,12 +246,14 @@ export default function Header() {
                   </Disclosure>
                   <Link
                       href="/contact"
+                      onClick={() => setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     تماس با ما
                   </Link>
                   <Link
                       href="/about"
+                      onClick={() => setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     درباره ما
