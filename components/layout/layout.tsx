@@ -10,7 +10,7 @@ export default function Main({ children }: any) {
   return (
     <Layout>
       <Header/>
-          <div className="sm:px-6 lg:px-8 h-[100vh]">{children}</div>
+          <div className="sm:px-6 lg:px-8">{children}</div>
       <Footer/>
     </Layout>
   );
