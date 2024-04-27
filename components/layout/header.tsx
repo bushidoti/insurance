@@ -80,7 +80,7 @@ export default function Header() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">نمایندگی بیمه البرز کد 8002</span>
-              <Image width={48} height={48} src="/logo.png" alt="Logo"/>
+              <Image className="w-[48px] h-[48px]" width={48} height={48} src="/logo.png" alt="Logo"/>
             </Link>
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
@@ -181,7 +181,7 @@ export default function Header() {
             <div className="flex items-center gap-x-6">
               <Link href="/" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
-                <Image className="" width={48} height={48} src="/logo.png" alt="Logo"/>
+                <Image className="w-[48px] h-[48px]" width={48} height={48} src="/logo.png" alt="Logo"/>
               </Link>
               <Link
                   href="/signup"
