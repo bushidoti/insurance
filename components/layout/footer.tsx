@@ -2,29 +2,28 @@ import { JSX, SVGProps } from "react"
 import Image from "next/image";
 
 const navigation = {
-  solutions: [
-    {name: 'Marketing', href: '#'},
-    {name: 'Analytics', href: '#'},
-    {name: 'Commerce', href: '#'},
-    {name: 'Insights', href: '#'},
-  ],
   support: [
-    {name: 'Pricing', href: '#'},
-    {name: 'Documentation', href: '#'},
-    {name: 'Guides', href: '#'},
-    {name: 'API Status', href: '#'},
+    {name: 'بیمه ثالث', href: '#'},
+    {name: 'بیمه بدنه', href: '#'},
+    {name: 'بیمه آتش سوزی', href: '#'},
+    {name: 'بیمه عمر', href: '#'},
+    {name: 'بیمه درمان', href: '#'},
+    {name: 'بیمه باربری', href: '#'},
+    {name: 'بیمه مسافرتی', href: '#'},
+    {name: 'بیمه مسئولیت', href: '#'},
+    {name: 'بیمه مهندسی', href: '#'},
   ],
   company: [
-    {name: 'About', href: '#'},
-    {name: 'Blog', href: '#'},
-    {name: 'Jobs', href: '#'},
-    {name: 'Press', href: '#'},
-    {name: 'Partners', href: '#'},
+    {name: 'خانه', href: '/'},
+    {name: 'وبلاگ', href: '/blog'},
+    {name: 'بیمه ها', href: '/insurance'},
+    {name: 'تماس با ما', href: '/contact'},
+    {name: 'درباره ما', href: '/about'},
   ],
   legal: [
-    {name: 'Claim', href: '#'},
-    {name: 'Privacy', href: '#'},
-    {name: 'Terms', href: '#'},
+    {name: 'حقوق', href: '/claim'},
+    {name: 'حریم خصوصی', href: '/privacy'},
+    {name: 'مقررات', href: '/terms'},
   ],
   social: [
     {
@@ -116,22 +115,10 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {navigation.solutions.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-green-900">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Support</h3>
-                <ul role="list" className="mt-6 space-y-4">
+            <div className="md:gap-8">
+              <div className="mt-10 md:mt-0 text-center">
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">بیمه ها</h3>
+                <ul role="list" className="mt-6 grid gap-4  md:gap-4 md:grid-cols-2">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-green-900">
@@ -144,7 +131,7 @@ export default function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Company</h3>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">نمایندگی</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
@@ -156,7 +143,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
+                <h3 className="text-sm font-semibold leading-6 text-gray-900">قانون</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>

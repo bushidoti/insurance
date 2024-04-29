@@ -7,12 +7,8 @@ const CarouselSlider: FC = function () {
       <div className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
         <div className="mx-auto max-w-screen-sm">
           <h2 className="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            Testimonials
+            نظرات
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 sm:text-xl">
-            Explore the whole collection of open-source web components and
-            elements built with the utility classes from Tailwind
-          </p>
         </div>
         <div className="h-80 py-4 2xl:h-96">
           <Carousel
@@ -53,7 +49,7 @@ const CarouselSlider: FC = function () {
             }
             theme={{
               root: {
-                base: "relative h-72 md:h-64 md:mx-auto md:w-2/3",
+                base: "relative h-72 md:h-70 md:mx-auto md:w-2/3",
                 leftControl:
                   "absolute bottom-0 right-1/2 flex items-center justify-center px-4 focus:outline-none",
                 rightControl:
@@ -70,9 +66,9 @@ const CarouselSlider: FC = function () {
             <div>
               <blockquote>
                 <p className="text-lg font-medium text-gray-900 dark:text-white sm:text-2xl">
-                  &quot;Flowbite is just awesome. It contains tons of predesigned
-                  components and pages starting from login screen to complex
-                  dashboard. Perfect choice for your next SaaS application.&quot;
+                  &quot;
+                  من به مدت چندین سال است که بیمه خودروی خود را از نمایندگی بیمه البرز تهیه می‌کنم و همیشه از کیفیت خدمات آنها راضی بوده‌ام. در مواقعی که نیاز به پشتیبانی داشتم، کارکنان با حوصله و دقت به سوالات من پاسخ دادند و در زمان بروز خسارت، پرداخت خسارت به سرعت و بدون دردسر انجام شد. بیمه درمان تکمیلی البرز نیز یکی از بهترین‌ها در بازار است و من برای خدمات درمانی خود هزینه بسیار کمی پرداخت می‌کنم. به همین دلیل، من به شدت نمایندگی بیمه البرز را به دیگران توصیه می‌کنم.
+                  &quot;
                 </p>
               </blockquote>
               <figcaption className="mt-6 flex items-center justify-center space-x-1 md:space-x-3">
@@ -85,18 +81,14 @@ const CarouselSlider: FC = function () {
                   <div className="pr-3 font-medium text-gray-900 dark:text-white">
                     Bonnie Green
                   </div>
-                  <div className="pl-3 text-sm text-gray-500 dark:text-gray-400">
-                    Web developer at Google
-                  </div>
                 </div>
               </figcaption>
             </div>
             <div>
               <blockquote>
                 <p className="text-lg font-medium text-gray-900 dark:text-white sm:text-2xl">
-                  &quot;As someone who mainly designs in the browser, I&apos;ve been a
-                  casual user of Figma, but as soon as I saw and started playing
-                  with Flowbite my mind was blown and became so productive.&quot;
+                  &quot;
+با توجه به تجربه‌ای که از خرید بیمه عمر از نمایندگی بیمه البرز داشتم، می‌توانم بگویم که از پشتیبانی و خدمات پس از فروش آنها بسیار خرسندم. هر زمان که سوال یا مشکلی داشتم، به سرعت و با دقت به من کمک کردند.                  &quot;
                 </p>
               </blockquote>
               <figcaption className="mt-6 flex items-center justify-center space-x-1 md:space-x-3">
@@ -109,18 +101,14 @@ const CarouselSlider: FC = function () {
                   <div className="pr-3 font-medium text-gray-900 dark:text-white">
                     Helene Engels
                   </div>
-                  <div className="pl-3 text-sm text-gray-500 dark:text-gray-400">
-                    Creative designer at Adobe
-                  </div>
                 </div>
               </figcaption>
             </div>
             <div>
               <blockquote>
                 <p className="text-lg font-medium text-gray-900 dark:text-white sm:text-2xl">
-                  &quot;As someone who mainly designs in the browser, I&apos;ve been a
-                  casual user of Figma, but as soon as I saw and started playing
-                  with Flowbite my mind was blown and became so productive.&quot;
+                  &quot;
+به عنوان کسی که برای اولین بار از نمایندگی بیمه البرز بیمه خریداری کرده است، باید بگویم که تجربه بسیار خوبی بود. اطلاعات کامل و شفاف ارائه شد و تمامی شرایط و مزایای بیمه به خوبی توضیح داده شد. از اینکه انتخابم را بر اساس اطلاعات دقیق انجام دادم، خوشحالم.&quot;
                 </p>
               </blockquote>
               <figcaption className="mt-6 flex items-center justify-center space-x-1 md:space-x-3">
@@ -132,33 +120,6 @@ const CarouselSlider: FC = function () {
                 <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
                   <div className="pr-3 font-medium text-gray-900 dark:text-white">
                     Helene Engels
-                  </div>
-                  <div className="pl-3 text-sm text-gray-500 dark:text-gray-400">
-                    Creative designer at Adobe
-                  </div>
-                </div>
-              </figcaption>
-            </div>
-            <div>
-              <blockquote>
-                <p className="text-lg font-medium text-gray-900 dark:text-white sm:text-2xl">
-                 &quot;Flowbite has code in one place and I&apos;m not joking when I say
-                  it took me a matter of minutes to copy the code, customise it
-                  and integrate within a Laravel + Vue application.&quot;
-                </p>
-              </blockquote>
-              <figcaption className="mt-6 flex items-center justify-center space-x-3">
-                <img
-                  alt=""
-                  src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/neil-sims.png"
-                  className="h-6 w-6 rounded-full"
-                />
-                <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                  <div className="pr-3 font-medium text-gray-900 dark:text-white">
-                    Neil Sims
-                  </div>
-                  <div className="pl-3 text-sm text-gray-500 dark:text-gray-400">
-                    CTO at Microsoft
                   </div>
                 </div>
               </figcaption>
