@@ -1,5 +1,5 @@
 import { ConfigProvider } from 'antd';
-import theme from './theme/themeConfig';
+import theme from '@/components/theme/themeConfig';
 import "@/styles/globals.css";
 import fa_IR from "antd/lib/locale/fa_IR";
 import dynamic from 'next/dynamic';
